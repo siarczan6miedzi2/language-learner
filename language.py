@@ -5,7 +5,7 @@ import os
 import sys
 import editor as ed
 
-lang = {
+lang = {}
 	"esperanto" : 0,
 	"italiano"  : 1,
 	"francais"  : 2,
@@ -14,82 +14,82 @@ lang = {
 
 lg = lang[sys.argv[1]]
 
-filename = [
+filename = (
 	"vortoj",
 	"parole",
 	"mots",
 	"worter"
-]
+)
 
-correct = [
+correct = (
 	"Korekte!",
 	"Corretto!",
 	"Correctement!",
 	"Richtig!"
-]
+)
 
-onceMore = [
+onceMore = (
 	"Penu refoje:",
 	"Prova un'altra volta:",
 	"Essaie une fois encore:",
 	"Versuche noch einmal:"
-]
+)
 
-correctAnswer = [
+correctAnswer = (
 	"Korekta respondo: ",
 	"La risposta corretta: ",
 	"La solution correcte: ",
 	"Richtige Antwort: "
-]
+)
 
-endOfWords = [
+endOfWords = (
 	"Fino de vortoj",
 	"Fine de parole",
 	"Fin de mots",
 	ed.diacritize("Ende der W\\:orter")
-]
+)
 
-learnt = [
+learnt = (
 	"Lernita vorto: ",
 	"La parola imparata",
 	"Le mot appris: ",
 	"Gelerntes Wort: "
-]
+)
 
-polishWord = [
+polishWord = (
 	"Pola vorto: ",
 	"La parola polacca: ",
 	"Le mot polonais: ",
 	"Polnisches Wort: "
-]
+)
 
-foreignWord = [
+foreignWord = (
 	"Esperanta vorto: ",
 	"La parola italiana: ",
 	ed.diacritize("Le mot fran\\ccais"),
 	"Deutsches Wort: "
-]
+)
 
-confirmation = [
+confirmation = (
 	"konfirmi [C], reenigi [T] aux konfirmi kaj cxesi [Q]: ",
 	"confermare [C], immettere di nuovo [T] o confermare e smettere [Q]: ",
 	"confirmer [C], entrer une fois encore [T] ou confirmer et quitter [Q]: ",
 	ed.diacritize("best\\:atigen [C], eingeben noch einmal [T] oder best\\:atigen und verlassen [Q]: ")
-]
+)
 
-header = [
+header = (
 	"\nESPERANTOJ VORTOJ",
 	"\nPAROLE ITALIANE",
 	ed.diacritize("\nLES MOTS FRAN\\cCAIS"),
 	ed.diacritize("\nDEUTSCHE W\\:ORTER")
-]
+)
 
-chooseMode = [
+chooseMode = (
 	"lerni [L], krei [C] aux cxesi [Q]?: ",
 	"imparare [L], creare [C] o smettere [Q]?: ",
 	ed.diacritize("apprendre [L], cr\\'eer [C] ou quitter [Q]?: "),
 	"lernen [L], erschaffen [C] oder verlassen [Q]?: "
-]
+)
 
 class vorto:
 	def __init__(self, polski, foreign):
