@@ -5,7 +5,7 @@ import os
 import sys
 import editor as ed
 
-lang = {}
+lang = {
 	"esperanto" : 0,
 	"italiano"  : 1,
 	"francais"  : 2,
