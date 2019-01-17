@@ -158,7 +158,7 @@ def lerni():
 				print(correct[lg])
 				qok(v)
 			else:
-				print(correctAnswer, v.polski, "-", v.foreign)
+				print(correctAnswer[lg], v.polski, "-", v.foreign)
 				neok(v)
 				
 	print(endOfWords[lg])
