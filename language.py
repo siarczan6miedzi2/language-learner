@@ -173,11 +173,11 @@ def lerni():
 		else: print(learnt[lg], v.polski, "-", v.foreign)
 
 def krei():
-	file = open(filename, 'a+', encoding='utf-8')
+	file = open(filename[lg], 'a+', encoding='utf-8')
 	
 	while True:
 		pl = input(polishWord[lg])
-		fg = input(foreighWord[lg])
+		fg = input(foreignWord[lg])
 		fg = ed.diacritize(fg)
 		
 		ch = input(confirmation[lg])
