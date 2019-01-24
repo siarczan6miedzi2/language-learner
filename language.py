@@ -143,6 +143,7 @@ def lerni():
 		if not v: break
 		else: vortoj.append(v)
 	file.close()
+	shuffle(vortoj)
 	for v in vortoj: # learning
 		if (v.time > time()): continue
 		s = input(v.polski + " - ")
