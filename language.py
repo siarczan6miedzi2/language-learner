@@ -9,7 +9,8 @@ lang = {
 	"esperanto" : 0,
 	"italiano"  : 1,
 	"francais"  : 2,
-	"deutsch"   : 3
+	"deutsch"   : 3,
+	"russkij"   : 4
 }
 
 lg = lang[sys.argv[1]]
@@ -18,77 +19,88 @@ filename = (
 	"vortoj",
 	"parole",
 	"mots",
-	"worter"
+	"worter",
+	"slova"
 )
 
 correct = (
 	"Korekte!",
 	"Corretto!",
 	"Correctement!",
-	"Richtig!"
+	"Richtig!",
+	"Правильно!"
 )
 
 onceMore = (
-	"Penu refoje:",
-	"Prova un'altra volta:",
-	"Essaie une fois encore:",
-	"Versuche noch einmal:"
+	"Penu refoje: ",
+	"Prova un'altra volta: ",
+	"Essaie une fois encore: ",
+	"Versuche noch einmal: ",
+	"Попробуй снова: "
 )
 
 correctAnswer = (
 	"Korekta respondo: ",
 	"La risposta corretta: ",
 	"La solution correcte: ",
-	"Richtige Antwort: "
+	"Richtige Antwort: ",
+	"Правильнуй ответ: "
 )
 
 endOfWords = (
 	"Fino de vortoj",
 	"Fine de parole",
 	"Fin de mots",
-	ed.diacritize("Ende der W\\:orter")
+	ed.diacritize("Ende der W\\:orter"),
+	"Конец слов"
 )
 
 learnt = (
 	"Lernita vorto: ",
-	"La parola imparata",
+	"La parola imparata: ",
 	"Le mot appris: ",
-	"Gelerntes Wort: "
+	"Gelerntes Wort: ",
+	"Выученное слово: "
 )
 
 polishWord = (
 	"Pola vorto: ",
 	"La parola polacca: ",
 	"Le mot polonais: ",
-	"Polnisches Wort: "
+	"Polnisches Wort: ",
+	"Польское слово: "
 )
 
 foreignWord = (
 	"Esperanta vorto: ",
 	"La parola italiana: ",
-	ed.diacritize("Le mot fran\\ccais"),
-	"Deutsches Wort: "
+	ed.diacritize("Le mot fran\\ccais: "),
+	"Deutsches Wort: ",
+	"Русское слово: "
 )
 
 confirmation = (
-	"konfirmi [C], reenigi [T] aux konfirmi kaj cxesi [Q]: ",
-	"confermare [C], immettere di nuovo [T] o confermare e smettere [Q]: ",
-	"confirmer [C], entrer une fois encore [T] ou confirmer et quitter [Q]: ",
-	ed.diacritize("best\\:atigen [C], eingeben noch einmal [T] oder best\\:atigen und verlassen [Q]: ")
+	"Konfirmi [C], reenigi [T] aux konfirmi kaj cxesi [Q]: ",
+	"Confermare [C], immettere di nuovo [T] o confermare e smettere [Q]: ",
+	"Confirmer [C], entrer une fois encore [T] ou confirmer et quitter [Q]: ",
+	ed.diacritize("best\\:atigen [C], eingeben noch einmal [T] oder best\\:atigen und verlassen [Q]: "),
+	"Подтверждай [C], вписывай ещо рас [T] или подтверждай и выходи [Q]: "
 )
 
 header = (
 	"\nESPERANTOJ VORTOJ",
 	"\nPAROLE ITALIANE",
 	ed.diacritize("\nLES MOTS FRAN\\cCAIS"),
-	ed.diacritize("\nDEUTSCHE W\\:ORTER")
+	ed.diacritize("\nDEUTSCHE W\\:ORTER"),
+	"РУССКИЕ СЛОВА"
 )
 
 chooseMode = (
-	"lerni [L], krei [C] aux cxesi [Q]?: ",
-	"imparare [L], creare [C] o smettere [Q]?: ",
+	"Lerni [L], krei [C] aux cxesi [Q]?: ",
+	"Imparare [L], creare [C] o smettere [Q]?: ",
 	ed.diacritize("apprendre [L], cr\\'eer [C] ou quitter [Q]?: "),
-	"lernen [L], erschaffen [C] oder verlassen [Q]?: "
+	"Lernen [L], erschaffen [C] oder verlassen [Q]?: ",
+	"Изучай [L], создавай [C] или выходи [Q]: "
 )
 
 class vorto:
