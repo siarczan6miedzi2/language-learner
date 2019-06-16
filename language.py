@@ -84,7 +84,7 @@ confirmation = (
 	"Confermare [C], immettere di nuovo [T] o confermare e smettere [Q]: ",
 	"Confirmer [C], entrer une fois encore [T] ou confirmer et quitter [Q]: ",
 	ed.diacritize("best\\:atigen [C], eingeben noch einmal [T] oder best\\:atigen und verlassen [Q]: "),
-	"Подтверждай [C], вписывай ещо рас [T] или подтверждай и выходи [Q]: "
+	"Подтверждай [П], вписывай ещо рас [В] или подтверждай и выходи [Й]: "
 )
 
 header = (
@@ -92,7 +92,7 @@ header = (
 	"\nPAROLE ITALIANE",
 	ed.diacritize("\nLES MOTS FRAN\\cCAIS"),
 	ed.diacritize("\nDEUTSCHE W\\:ORTER"),
-	"РУССКИЕ СЛОВА"
+	"\nРУССКИЕ СЛОВА"
 )
 
 chooseMode = (
@@ -100,7 +100,7 @@ chooseMode = (
 	"Imparare [L], creare [C] o smettere [Q]?: ",
 	ed.diacritize("apprendre [L], cr\\'eer [C] ou quitter [Q]?: "),
 	"Lernen [L], erschaffen [C] oder verlassen [Q]?: ",
-	"Изучай [L], создавай [C] или выходи [Q]: "
+	"Изучай [И], создавай [С] или выходи [Й]: "
 )
 
 class vorto:
@@ -195,13 +195,13 @@ def krei():
 		
 		ch = input(confirmation[lg])
 		
-		if not (ch == 't' or ch == 'T'): # try again
+		if not (ch == 't' or ch == 'T' or ch == 'в' or ch == 'В'): # try again
 			v = vorto(pl, fg)
 			v.time += randint(100000, 200000)
 			file.write(v.str())
 			file.write('\n')
 		
-		if (ch == 'q' or ch == 'Q'): break # quit
+		if (ch == 'q' or ch == 'Q' or ch == 'й' or ch == 'Й'): break # quit
 		
 	file.close()
 		
@@ -220,8 +220,8 @@ def main():
 		ch = ' '
 		while True:
 			ch = input(chooseMode[lg])
-			if (ch == 'l' or ch == 'L'): lerni()
-			elif (ch == 'c' or ch == 'C'): krei()
-			elif (ch == 'q' or ch == 'Q'): break
+			if (ch == 'l' or ch == 'L' or ch == 'и' or ch == 'И'): lerni()
+			elif (ch == 'c' or ch == 'C' or ch == 'с' or ch == 'С'): krei()
+			elif (ch == 'q' or ch == 'Q' or ch == 'й' or ch == 'Й'): break
 		
-main()
+if __name__ == "__main__": main()
