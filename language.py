@@ -144,7 +144,7 @@ def qok(v):
 		v.time = time() + randint(1250000, 1750000)
 	
 def neok(v):
-	v.time = time() + randint(100000, 200000)
+	v.time = time() + randint(50000, 100000) # 10-20k provet to be too much
 	v.stage = 0
 		
 def lerni():
